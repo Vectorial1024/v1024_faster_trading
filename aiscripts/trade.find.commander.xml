@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Add in the code to speed up idle time when commander is a trade station (we expect trade stations to have high volume trading) -->
+<!-- Should have no real performance problem since most of the time the traders are traveling -->
+<!-- Should also have no logistical problem since we are targeting tradestations, and tradestations do not really care about rapid trading; the more the merrier! -->
+<diff>
+    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/do_while/set_value[@name='$loopcount']" pos="after">
+        <do_if value="$commanderstation.tradewares.list.count gt 0" comment="It seems istradestation is only for the specified NPC tradestations">
+            <show_help custom="'Commander is tradestation; high-volume trading!'" pos="1" duration="3s" chance="0" />
+            <set_value name="$loopcount" exact="$loopcount + 2" comment="this results in 3x the speed; new idle time range is 0.5 to 1.83 minutes" />
+        </do_if>
+    </add>
+</diff>
