@@ -11,7 +11,7 @@
             <resume label="buy" />
         </do_if>
     </add>
-    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/run_script[@name='\'move.idle\'\']" pos="before">
+    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/run_script[@name='\'move.idle\'']" pos="before">
         <do_if value="@$hasDivertedImporting">
             <!-- Actually, we did not try exporting. Let's get back to there! -->
             <resume label="start" />
