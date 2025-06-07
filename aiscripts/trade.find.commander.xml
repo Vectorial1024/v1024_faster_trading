@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<!-- Add in the code to speed up idle time when commander is a trade station (we expect trade stations to have high volume trading) -->
-<!-- Should have no real performance problem since most of the time the traders are traveling -->
-<!-- Should also have no logistical problem since we are targeting tradestations, and tradestations do not really care about rapid trading; the more the merrier! -->
+<!-- Various code modifications to improve trade hub throughput; more details please see README. -->
+
 <diff>
+    <!-- Start with something easy: divert some traders to directly consider imports -->
+    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/label[@name='sell']" pos="after">
+        <do_if value="not @$hasDivertedImporting" chance="20" comment="Small chance to divert to handle imports">
+            <!-- Jump to ware imports -->
+            <set_value name="$hasDivertedImporting" exact="true" />
+            <resume label="buy" />
+        </do_if>
+    </add>
+    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/run_script[@name='\'move.idle\'\']" pos="before">
+        <do_if value="@$hasDivertedImporting">
+            <!-- Actually, we did not try exporting. Let's get back to there! -->
+            <resume label="start" />
+        </do_if>
+    </add>
+
     <add sel="/aiscript[@name='trade.find.commander']/attention/actions/do_while/set_value[@name='$loopcount']" pos="after">
         <do_if value="this.ship.idcode == 'CDC-081'">
             <show_help custom="'CDC-081 idling.'" pos="1" duration="3s" chance="100" />
