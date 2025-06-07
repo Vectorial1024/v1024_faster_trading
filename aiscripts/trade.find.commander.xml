@@ -11,7 +11,9 @@
             <resume label="buy" />
         </do_if>
     </add>
-    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/run_script[@name='\'move.idle\'']" pos="before">
+    <add sel="/aiscript[@name='trade.find.commander']/attention/actions/run_script" pos="before">
+        <!-- Interestingly, there is only 1 run_script tag in the entire script... -->
+        <!-- This is before the "long sleep" after "failed to trade: no trade found" -->
         <do_if value="@$hasDivertedImporting">
             <!-- Actually, we did not try exporting. Let's get back to there! -->
             <resume label="start" />
