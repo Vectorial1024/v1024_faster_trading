@@ -8,6 +8,8 @@ Less idle time for station traders in X4 Foundations
 
 > Effective logistics; that's how simple it is!
 
+**Notice: Mod is currently temporarily unavailable because it causes unexpected full freeze.**
+
 ---
 
 ## Quick Info
