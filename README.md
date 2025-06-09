@@ -15,10 +15,23 @@ Less idle time for station traders in X4 Foundations
 ## Quick Info
 TL;DR: no player action needed!
 
-Firstly, trade hubs are defined as trading stations that trade in many types of wares in a small corner of the map.
+This mod aims to increase station trading throughput by doing the following to station traders:
+- reduce their various undocumented trade-matching-related idle time; and
+- diverting some station traders to be import-first, instead of the usual export-first
+  - this works in conjunction with the new shortage handling feature since 7.6
+All stations (usually player stations) are benefitted, but the underlying goal is to improve player trading station throughput, to make them more like "regional logistics hubs".
 
-This mod aims to improve trade hub throughput by reducing the various undocumented trade-related idle time, and also diverting some traders to handle importing wares.
-This hopefully reduces the need to use custom trading scripts (e.g. TaterTrade, the Mules, etc.).
+This mod **does NOT modify** the following:
+- the stay-at-dock time of station traders
+- the behavior of "free" traders:
+  - unassigned traders; or
+  - traders working in a Mimic-fleet
+
+Some expected practical benefits:
+- late-game trading networks require less trading ships
+- vanilla-like trading behavior is good enough, less need to use custom trading scripts (e.g. TaterTrade, the Mules, etc.)
+
+Be warned: _in theory_, this mod may result in more frequent lag spikes, but perhaps this risk is balanced out by actually having less trade ships for the game to process.
 
 If you have used Civilian Fleets before, this should feel similar to when you would be setting up a regional trading fleet to move wares from this side of the map to the other side of the map.
 
