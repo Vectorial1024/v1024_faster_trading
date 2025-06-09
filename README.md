@@ -17,7 +17,7 @@ TL;DR: no player action needed!
 
 This mod aims to increase station trading throughput by doing the following to station traders:
 - reduce their various undocumented trade-matching-related idle time; and
-- diverting some station traders to be import-first, instead of the usual export-first
+- diverting some (20%) station traders to be import-first, instead of the usual export-first
   - this works in conjunction with the new shortage handling feature since 7.6
 All stations (usually player stations) are benefitted, but the underlying goal is to improve player trading station throughput, to make them more like "regional logistics hubs".
 
