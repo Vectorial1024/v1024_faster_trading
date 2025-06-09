@@ -46,7 +46,7 @@ It turns out, vanilla station traders have a lot of idling built into them:
   - Other traders must wait for their turn; this lasts for max 1.5 to 5.5 minutes
   - Code comments suggest this is to prevent trade stampeding, but they didn't make this a hard requiremment...?
 - Traders idle a bit while iterating through nearby sectors to find matching trade offers
-  - About 1 to 3 seconds per sector searched
+  - e.g., if exporting wares, about 1 to 3 seconds per sector searched
 - Traders will always try to export station wares first, and will not import unless there are really no good export deals
   - Traders will directly consider importing only when the station has nothing to export
 
