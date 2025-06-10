@@ -2,9 +2,9 @@
 Less idle time for station traders in X4 Foundations
 
 - Our GitHub repo: https://github.com/Vectorial1024/v1024_faster_trading
-- Our EgoSoft Forums link: https://forum.egosoft.com/viewtopic.php?t=471464
-- Our Steam Workshop link: https://steamcommunity.com/sharedfiles/filedetails/?id=3495318749
-- Our Nexus Mods link: https://www.nexusmods.com/x4foundations/mods/1718
+- Our EgoSoft Forums link: N/A
+- Our Steam Workshop link: N/A
+- Our Nexus Mods link: N/A
 
 > Effective logistics; that's how simple it is!
 
